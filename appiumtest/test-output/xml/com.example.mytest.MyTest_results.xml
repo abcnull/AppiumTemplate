@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MyTest"
+           tests="2"
+           failures="1"
+           errors="0"
+           skipped="1"
+           time="3.262">
+  <properties />
+            <testcase name="launch" time="3.262" classname="com.example.mytest.MyTest">
+                <failure type="org.openqa.selenium.WebDriverException"
+                  message="Connection refused: connect
+Build info: version: &apos;3.12.0&apos;, revision: &apos;7c6e0b3&apos;, time: &apos;2018-05-08T14:04:26.12Z&apos;
+System info: host: &apos;DESKTOP-3M7TENJ&apos;, ip: &apos;192.168.137.1&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_172&apos;
+Driver info: driver.version: AppiumDriver"
+              >
+<![CDATA[org.openqa.selenium.WebDriverException: Connection refused: connect
+Build info: version: '3.12.0', revision: '7c6e0b3', time: '2018-05-08T14:04:26.12Z'
+System info: host: 'DESKTOP-3M7TENJ', ip: '192.168.137.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_172'
+Driver info: driver.version: AppiumDriver
+  io.appium.java_client.remote.AppiumCommandExecutor.lambda$2(AppiumCommandExecutor.java:243)
+  java.util.Optional.orElseGet(Optional.java:267)
+  io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:242)
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+  io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+  io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+  org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
+  org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:130)
+  io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:38)
+  io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:84)
+  io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:94)
+  com.example.base.SimpleInitiator.setAppDriver(SimpleInitiator.java:202)
+  com.example.base.SimpleInitiator.launch(SimpleInitiator.java:108)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+  org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+  org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+  org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+  org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+  org.testng.TestRunner.beforeRun(TestRunner.java:529)
+  org.testng.TestRunner.run(TestRunner.java:497)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+  org.testng.SuiteRunner.run(SuiteRunner.java:364)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+  org.testng.TestNG.runSuites(TestNG.java:1049)
+  org.testng.TestNG.run(TestNG.java:1017)
+  org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+  org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:127)
+Caused by: java.net.ConnectException: Connection refused: connect
+  java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+  java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+  java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350)
+  java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+  java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+  java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+  java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+  java.net.Socket.connect(Socket.java:589)
+  okhttp3.internal.platform.Platform.connectSocket(Platform.java:125)
+  okhttp3.internal.connection.RealConnection.connectSocket(RealConnection.java:238)
+  okhttp3.internal.connection.RealConnection.connect(RealConnection.java:158)
+  okhttp3.internal.connection.StreamAllocation.findConnection(StreamAllocation.java:256)
+  okhttp3.internal.connection.StreamAllocation.findHealthyConnection(StreamAllocation.java:134)
+  okhttp3.internal.connection.StreamAllocation.newStream(StreamAllocation.java:113)
+  okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:42)
+  okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+  okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+  okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:93)
+  okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+  okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+  okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+  okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+  okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:125)
+  okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:147)
+  okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:121)
+  okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:200)
+  okhttp3.RealCall.execute(RealCall.java:77)
+  org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:105)
+  org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:101)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  io.appium.java_client.remote.AppiumCommandExecutor$1.createSession(AppiumCommandExecutor.java:185)
+  io.appium.java_client.remote.AppiumCommandExecutor.createSession(AppiumCommandExecutor.java:209)
+  io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:231)
+  org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+  io.appium.java_client.DefaultGenericMobileDriver.execute(DefaultGenericMobileDriver.java:42)
+  io.appium.java_client.AppiumDriver.execute(AppiumDriver.java:1)
+  org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:207)
+  org.openqa.selenium.remote.RemoteWebDriver.<init>(RemoteWebDriver.java:130)
+  io.appium.java_client.DefaultGenericMobileDriver.<init>(DefaultGenericMobileDriver.java:38)
+  io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:84)
+  io.appium.java_client.AppiumDriver.<init>(AppiumDriver.java:94)
+  com.example.base.SimpleInitiator.setAppDriver(SimpleInitiator.java:202)
+  com.example.base.SimpleInitiator.launch(SimpleInitiator.java:108)
+  sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+  sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+  sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+  java.lang.reflect.Method.invoke(Method.java:498)
+  org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+  org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+  org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:458)
+  org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+  org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
+  org.testng.TestRunner.beforeRun(TestRunner.java:529)
+  org.testng.TestRunner.run(TestRunner.java:497)
+  org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+  org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+  org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+  org.testng.SuiteRunner.run(SuiteRunner.java:364)
+  org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+  org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+  org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
+  org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
+  org.testng.TestNG.runSuites(TestNG.java:1049)
+  org.testng.TestNG.run(TestNG.java:1017)
+  org.testng.IDEARemoteTestNG.run(IDEARemoteTestNG.java:72)
+  org.testng.RemoteTestNGStarter.main(RemoteTestNGStarter.java:127)
+]]>
+      </failure>
+
+          </testcase>
+  
+            <testcase name="test" time="0.0" classname="com.example.mytest.MyTest">
+          <skipped />
+    </testcase>
+  
+  
+</testsuite>

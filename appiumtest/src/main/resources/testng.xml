@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="MySuit">
+    <!--
+       tests级别：不同的test标签(tag)下的用例可以在不同的线程下执行相同的test标签(tag)下的用例只能在同一个线程中去执行
+       methods级别：所有用例都可以在不同的线程下去执行，但是要保证是同一个类
+       classes级别：相同的classes标签下的用例在同一个线程中执行不同的classes标签下的用例可以在不同的线程下执行
+       thread-count: 代表了最大并发线程数xml文件配置这种方式不能指定线程池，只有方法上才可以指定线程池
+    -->
+
+    <!--listener 不使用默认产生报告的监听器配置，自己写明一个产生报告的监听器-->
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter" />
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+    </listeners>
+
+    <test name="MyTest" verbose="2">
+        <!--
+            name：一个测试 test 的名称
+            preserve-order：为 true 时，表示 <test> 中的 <class> 按照顺序执行，默认就是 true，
+                            在一个 <class> 中可能存在多个 @Test 注解，这个不受 preserve-order 字段控制，默认按照方法名字母表顺序执行，在 @Test 注解中加上 priority，数值越小越靠前执行
+            verbose：testng在默认情况下会产生 2 种类型测试报告 HTML 和 XML，且默认位于 test-output 下，一般 verbose=2，标识记录日志的级别，0 表示无，10 表示最详细
+        -->
+        <!--<groups>-->
+            <!--<run>-->
+                <!--<include name="group1" />-->
+                <!--<exclude name="group2" />-->
+            <!--</run>-->
+        <!--</groups>-->
+        <classes>
+            <class name="com.example.mytest.MyTest" />
+        </classes>
+    </test>
+
+
+
+</suite>

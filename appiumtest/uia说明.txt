@@ -1,0 +1,3 @@
+安卓自带的sdk中的UI Automator Viewer工具暂不支持安卓8.1系统，于是这边在网络中下载了支持安卓8.1的Viewer工具uia.jar，通过cmd命令来开启，如下：
+
+java -jar "D:\Documents\Tencent Files\XXXXX\FileRecv\uia.jar"
